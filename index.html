@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="src/style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+  <img class="bg-img" src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode img">
+
+  <main>
+    <!-- HEADER -->
+    <div class="header">
+      <h1 id="title">TODO</h1>
+      <img class="dark-light-icon" src="assets/images/icon-sun.svg" alt="light or dark mode icon">
+    </div>
+  
+    <!-- INPUT -->
+    <div class="new-todo">
+      <div class="check">
+          <div class="check-mark">
+          </div>
+      </div>
+      <div class="new-todo-input">
+        <form onsubmit="createTask(event)">
+          <input id="todo-input" type="text" placeholder="Create a new todo...">
+        </form>
+      </div>
+    </div>
+  
+      <!-- TASKS -->
+    <section class="tasks-div">
+      <ul class="tasks">
+        <div class="todo-item">
+          <div class="check">
+            <div class="check-mark checked">
+              <img src="assets/images/icon-check.svg" alt="">
+            </div>
+          </div>
+          <li class="todo-text checked">
+            Cortar cabelo
+          </li>
+        </div>
+        <div class="todo-item">
+          <div class="check">
+            <div class="check-mark checked">
+              <img src="assets/images/icon-check.svg" alt="">
+            </div>
+          </div>
+          <li class="todo-text checked">
+            Cortar cabelo
+          </li>
+        </div>
+        <div class="todo-item">
+          <div class="check">
+            <div class="check-mark checked">
+              <img src="assets/images/icon-check.svg" alt="">
+            </div>
+          </div>
+          <li class="todo-text checked">
+            Cortar cabelo
+          </li>
+        </div>
+      </ul>
+  
+      <!-- BOTTOM -->
+      <div class="tasks-info">
+        <span class="left-items">5 items</span>
+        <div class="items-statuses">
+          <span>All</span>
+          <span>Active</span>
+          <span>Completed</span>
+        </div>          
+        <span class="clear-items">Clear completed</span>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <p class="drag-p">Drag and drop to reorder list</p>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Hashimoto1312">Kendi Hashimoto</a>.
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="src/script.js"></script>
+</body>
+</html>
