@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <!-- FONT -->
@@ -17,82 +17,74 @@
 </head>
 <body>
 
-  <img class="bg-img" src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode img">
+  <!-- IMG BACKGROUND -->
+  <div class="background-img">
+    <img src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode img">
+  </div>  
 
-  <main>
-    <!-- HEADER -->
-    <div class="header">
-      <h1 id="title">TODO</h1>
-      <img class="dark-light-icon" src="assets/images/icon-sun.svg" alt="light or dark mode icon">
-    </div>
-  
-    <!-- INPUT -->
-    <div class="new-todo">
-      <div class="check">
-          <div class="check-mark">
-          </div>
+  <main class="container">
+
+      <!-- HEADER -->
+    <header class="header">
+      <div class="title">
+        TODO
       </div>
+      <div class="theme">
+        <img src="assets/images/icon-sun.svg" alt="Light or dark theme icon.">
+      </div>
+    </header>
+      
+    <!-- INPUT -->
+    <article class="input">
+      <div class="check">
+        <div class="check-mark"></div>
+      </div>
+        
       <div class="new-todo-input">
-        <form onsubmit="createTask(event)">
-          <input id="todo-input" type="text" placeholder="Create a new todo...">
+        <form onsubmit="createTask()">
+          <input id="new-todo-input" type="text" placeholder="Create a new todo..."/>
         </form>
       </div>
-    </div>
-  
+    </article>
+
+    <section class="todo-items-wrapper">
+
       <!-- TASKS -->
-    <section class="tasks-div">
-      <ul class="tasks">
+      <div class="todo-items">
         <div class="todo-item">
           <div class="check">
-            <div class="check-mark checked">
-              <img src="assets/images/icon-check.svg" alt="">
+            <div class="check-mark">
+              <img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
             </div>
           </div>
-          <li class="todo-text checked">
-            Cortar cabelo
-          </li>
-        </div>
-        <div class="todo-item">
-          <div class="check">
-            <div class="check-mark checked">
-              <img src="assets/images/icon-check.svg" alt="">
-            </div>
+          <div class="todo-text">
+            Cut the hair
           </div>
-          <li class="todo-text checked">
-            Cortar cabelo
-          </li>
         </div>
-        <div class="todo-item">
-          <div class="check">
-            <div class="check-mark checked">
-              <img src="assets/images/icon-check.svg" alt="">
-            </div>
-          </div>
-          <li class="todo-text checked">
-            Cortar cabelo
-          </li>
-        </div>
-      </ul>
-  
-      <!-- BOTTOM -->
+      </div>
+
+       <!-- TASKS INFO -->
       <div class="tasks-info">
-        <span class="left-items">5 items</span>
+        <div class="left-item">
+          5 items left
+        </div>
         <div class="items-statuses">
-          <span>All</span>
-          <span>Active</span>
-          <span>Completed</span>
-        </div>          
-        <span class="clear-items">Clear completed</span>
+          <span class="all-items">All</span>
+          <span class="active-items">Active</span>
+          <span class="completed-items">Completed</span>
+        </div>
+        <div class="items-clear">
+          <span>Clear Completed</span>
+        </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <p class="drag-p">Drag and drop to reorder list</p>
   </main>
 
+      <!-- FOOTER -->
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/Hashimoto1312">Kendi Hashimoto</a>.
+    Coded by <a href="https://github.com/Hashimoto1312" target="_blank">Kendi Hashimoto</a>.
   </footer>
 
   <!-- SCRIPT -->

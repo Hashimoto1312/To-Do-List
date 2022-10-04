@@ -26,71 +26,92 @@
 }
 
 /* GENERALS */
-html {
-   margin: 0;
-   padding: 0;
-   border: border-box;
-   font-size: 62.5% 
-}
-
 body {
-   margin-bottom:5.0rem;
+   display: flex;
+   justify-content: center;
    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-;
    background-color: var(--very-dark-blue);
 }
 
-.bg-img {
+.background-img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   min-height: 350px;
+   z-index: -1;
+}
+
+.background-img img {
    width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: left;
 }
 
 /* MAIN */
-main {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   position: relative;
-   top: -300px;
+.container {
+   width: 100%;
+   max-width: 700px;
+   margin: 0 30px;
+   margin-top: 105px;
 }
 
 /* HEADER */
 .header {
    display: flex;
-   text-align: center;
    justify-content: space-between;
-   width: 37vw;
-   margin-bottom: 4.3rem;
+   align-items: center;
 }
 
-#title {
+.title {
    color: white;
-   font-size: 3.5rem;
-   letter-spacing: 1.5rem;
-}
-
-.dark-light-icon {
-   height: 2.3rem;
-   align-self: center;
-}
-
-.dark-light-icon:hover {
-   cursor: pointer;
+   font-size: 50px;
+   font-weight: bold;
+   letter-spacing: 19px;
 }
 
 /* INPUT */
-.new-todo {
-   width: 38vw;
-   background-color: var(--very-very-dark-grayish-blue);
-   margin-bottom: 2.0rem;
-   height: 6.0rem;
-   border-radius: 5px;
+.input {
+   background-color: var(--very-dark-desaturated-blue);
+   height: 70px;
+   margin-top: 60px;
+   border-radius: 6px;
    display: flex;
+}
+
+.check {
+   display: flex;
+   justify-content: center;
    align-items: center;
-   color: var(--light-grayish-blue);
-   box-shadow: 0px 12px 22px -16px rgba(0,0,0,0.54);
-   -webkit-box-shadow: 0px 12px 22px -16px rgba(0,0,0,0.54);
-   -moz-box-shadow: 0px 12px 22px -16px rgba(0,0,0,0.54);
-   outline: none;
+   width: 70px;
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+.check-mark {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px; 
+
+   border-radius: 50%;
+   border: 2px solid var(--very-very-dark-grayish-blue);
+   cursor: ponter;
+   transition: all 0.25s;
+}
+
+.check-mark:hover {
+   border: 2px solid;
+   border-image-slice: 1;
+   border-width: 5px;
+   border-image-source: var(--check-background);
+
+}
+
+.check-icon {
+   display: none;
 }
 
 .new-todo-input {
@@ -99,91 +120,62 @@ main {
    align-items: center;
 }
 
-#todo-input {
-   display: flex;
+.new-todo-input form {
+   flex-grow: 1;
+}
+
+.new-todo-input input {
    width: 100%;
-   font-size: 18px;
+   padding: 10px 0px;
    background-color: transparent;
-   border: none; 
-   margin-right: 30.0rem;
+   border: none;
    outline: none;
    color: var(--light-grayish-blue);
-   justify-content: flex-start;
+   font-size: 18px;
 }
 
-.check {
-   width: 70px;
-   margin-left: 2.0rem;
-}
-
-.check-mark {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   border: 1px solid var(--dark-grayish-blue);
-   opacity: 0.5;
-   transition: all 0.25s;
-   cursor: pointer;
-}
-
-.check-mark > img {
-   display: none;
-}
-
-.check-mark:hover {
-   border: 1px solid var(--check-background);
+.new-todo-input input::placeholder {
+   color: var(--light-grayish-blue);
 }
 
 /* TASKS */
-.tasks-div {
-   background-color: var(--very-very-dark-grayish-blue);
-   margin-bottom: 5.0rem;
-   width: 37.9vw;
-   border-radius: 5px;
+.todo-items-wrapper {
+   margin-top: 30px;
+   background-color: var(--very-dark-desaturated-blue);
+   border-radius: 6px;
    overflow: hidden;
-   box-shadow: 0px 35px 36px -1px rgba(0,0,0,0.33);
-   -webkit-box-shadow: 0px 35px 36px -1px rgba(0,0,0,0.33);
-   -moz-box-shadow: 0px 35px 36px -1px rgba(0,0,0,0.33);
-}
-
-.tasks {
-   background-color: var(--very-very-dark-grayish-blue);
-   color: var(--light-grayish-blue);
-   list-style-type: none;
+   box-shadow: 0 2px 30px 0px rgba(0,0,0,0.4);
 }
 
 .todo-item {
+   display: flex;
    height: 70px;
-   display: flex;
-   align-items: center;
+   width: 100%;
+   border-bottom: 1px solid var(--very-very-dark-grayish-blue);
+   color: var(--light-grayish-blue);
+   font-size: 18px;
    transition: all 0.25s ease;
-   display: flex;
-   z-index: -1;
    cursor: pointer;
-   border-bottom: 1px solid var(--very-dark-grayish-blue);
 }
 
 .todo-item:hover {
    transform: translateY(-2px);
-   box-shadow: 0 0px 10px 0px var(--very-dark-desaturated-blue);
-   z-index: 10;
+   box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
 }
 
 .todo-text {
-   font-size: 18px;
-   color: var(--light-grayish-blue);
+   display: flex;
+   align-items: center;
 }
 
-/* BOTTOM */
+/* TASKS INFO */
 .tasks-info {
    display: flex;
+   height: 70px;
+   color: var(--very-dark-grayish-blue);
    justify-content: space-between;
-   color: var(--dark-grayish-blue);
-   padding: 1.9rem;
-   font-size: 1.3rem;
+   padding: 0 30px;
+   align-items: center;
 }
 
 .items-statuses {
@@ -192,25 +184,32 @@ main {
 }
 
 .items-statuses span {
-   padding: 0 1rem;
+   padding: 0 10px;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.all-items:hover, .all-items {
+   color: var(--bright-blue);
+}
+
+.active-items:hover, .completed-items:hover {
+   color: white;
+}
+
+.items-clear {
    cursor: pointer;
 }
 
-.clear-items {
-   cursor: pointer;
+.items-clear:hover {
+   color: var(--light-grayish-blue);
 }
 
 /* FOOTER */
-.drag-p {
-   color: var(--very-dark-grayish-blue);
-   text-align: center;
-   font-size: 1.2rem;
-}
-
 .attribution { 
    font-size: 1.1rem; 
    text-align: center; 
-   position: fixed;
+   position: absolute;
    height: 2.5rem;
    bottom: 0rem;
    left: 0rem;
@@ -218,4 +217,5 @@ main {
    margin-bottom: 0rem;
    color: white;
 }
+
 .attribution a { color: hsl(228, 45%, 44%); }
