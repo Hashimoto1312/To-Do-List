@@ -19,7 +19,8 @@
 
   <!-- IMG BACKGROUND -->
   <div class="background-img">
-    <img src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode img">
+    <img class="dark-desktop-img" src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode desktop img">
+    <img class="dark-mobile-img" src="assets/images/bg-mobile-dark.jpg" alt="light or dark mode mobile img">
   </div>  
 
   <main class="container">
@@ -52,13 +53,48 @@
       <!-- TASKS -->
       <div class="todo-items">
         <div class="todo-item">
-          <div class="check">
-            <div class="check-mark">
-              <img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
+          <div class="check-and-text">
+            <div class="check">
+              <div class="check-mark">
+                <img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
+              </div>
+            </div>
+            <div class="todo-text">
+              Cut the hair
             </div>
           </div>
-          <div class="todo-text">
-            Cut the hair
+          <div class="delete-icon">
+            <img src="assets/images/icon-cross.svg" alt="Delete icon">
+          </div>
+        </div>
+        <div class="todo-item">
+          <div class="check-and-text">
+            <div class="check">
+              <div class="check-mark">
+                <img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
+              </div>
+            </div>
+            <div class="todo-text">
+              Cut the hair
+            </div>
+          </div>
+          <div class="delete-icon">
+            <img src="assets/images/icon-cross.svg" alt="Delete icon">
+          </div>
+        </div>
+        <div class="todo-item">
+          <div class="check-and-text">
+            <div class="check">
+              <div class="check-mark">
+                <img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
+              </div>
+            </div>
+            <div class="todo-text">
+              Cut the hair
+            </div>
+          </div>
+          <div class="delete-icon">
+            <img src="assets/images/icon-cross.svg" alt="Delete icon">
           </div>
         </div>
       </div>
@@ -78,6 +114,15 @@
         </div>
       </div>
     </section>
+
+    <!-- MOBILE STATUSES -->
+    <div class="mobile-items-statuses">
+      <span class="all-items">All</span>
+      <span class="active-items">Active</span>
+      <span class="completed-items">Completed</span>
+    </div>
+
+    <p class="drag-text">Drag and drop to reorder list</p>
 
   </main>
 
