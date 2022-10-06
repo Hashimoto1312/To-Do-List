@@ -17,11 +17,17 @@
 </head>
 <body>
 
-  <!-- IMG BACKGROUND -->
-  <div class="background-img">
-    <img class="dark-desktop-img" src="assets/images/bg-desktop-dark.jpg" alt="light or dark mode desktop img">
-    <img class="dark-mobile-img" src="assets/images/bg-mobile-dark.jpg" alt="light or dark mode mobile img">
-  </div>  
+  <!-- IMGS BACKGROUND -->
+  <picture class="background-img">
+
+    <!-- DARK  MODE -->
+    <img class="dark-desktop-img" src="assets/images/bg-desktop-dark.jpg" alt="Dark desktop image">
+    <img class="dark-mobile-img" src="assets/images/bg-mobile-dark.jpg" alt="Dark mobile image">
+
+    <!-- LIGHT MODE -->
+    <img class="light-desktop-img" src="assets/images/bg-desktop-light.jpg" alt="Light desktop image">
+    <img class="light-mobile-img" src="assets/images/bg-mobile-light.jpg" alt="Light mobile image">
+  </picture>  
 
   <main class="container">
 
@@ -31,7 +37,8 @@
         TODO
       </div>
       <div class="theme">
-        <img src="assets/images/icon-sun.svg" alt="Light or dark theme icon.">
+        <img class="sun-icon" src="assets/images/icon-sun.svg" alt="Sun icon">
+        <img class="moon-icon" src="assets/images/icon-moon.svg" alt="Moon icon">
       </div>
     </header>
       
