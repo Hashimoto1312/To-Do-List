@@ -156,7 +156,7 @@ body {
 }
 
 .check-mark:hover {
-   border: 1.5px solid transparent;
+   border: 2px solid transparent;
    background: var(--check-background) border-box;
    
    -webkit-mask:
