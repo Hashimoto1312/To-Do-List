@@ -27,8 +27,8 @@ Users should be able to:
 
 - [x] View the optimal layout for the app depending on their device's screen size
 - [] See hover states for all interactive elements on the page
-- [] **Add** new todos to the list
-- [x] **Mark** todos as complete
+- [x] **Add** new todos to the list
+- [] **Mark** todos as complete
 - [] **Delete** todos from the list
 - [] **Filter** by all/active/complete todos
 - [] **Clear** all completed todos
@@ -39,7 +39,8 @@ Users should be able to:
 
 - [] Remove the check-mark hover when clicking on the task circle
 - [] Mark off task
-
+- [] "Create a new todo..." after add task
+- [] Local storage
 ### Screenshot
 
 ![](./screenshot.jpg)
@@ -55,8 +56,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- [Styled Components](https://styled-components.com/) - For styles
 ### What I learned
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.

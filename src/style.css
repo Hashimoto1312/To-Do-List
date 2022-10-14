@@ -166,14 +166,14 @@ body {
       mask-composite: exclude;
 }
 
-.check-icon { visibility: hidden; }
+.check-icon { display: none; }
 
 /* CHECK TASK */
 .check-task-background { 
    background: var(--check-background); 
 }
 
-.completed-task .check-icon { visibility: visible; }
+.completed-task .check-icon { display: unset; }
 
 .completed-task .todo-text {
    color: gray;
@@ -353,7 +353,7 @@ body.light .check-mark {
 }
 
 body.light .check-mark:hover {
-   border: 1.5px solid transparent;
+   border: 2px solid transparent;
    background: var(--check-background) border-box;
    
    -webkit-mask:
