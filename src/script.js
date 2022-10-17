@@ -1,20 +1,18 @@
-
-const body = document.querySelector('body');
 const addBtn = document.querySelector('.check-mark');
 const input = document.getElementById('new-todo-input');
 const todoContainer = document.querySelector('.todo-items');
-const checkTask = document.querySelector('.todo-item .check-mark');
 const delBtn = document.querySelector('.delete-button');
+const clearAllCompleted = document.querySelector('.items-clear')
+
 let todoItems = [];
 
-const darkIcon = document.querySelector('.moon-icon');
-const lightIcon = document.querySelector('.sun-icon');
+const body = document.querySelector('body');
+const theme = document.querySelector('.theme');
    
 // * ADD TASK
 createTask = (text) => {
    const task = {
       text,
-      checked: false,
       id: Date.now(),
    };
 
@@ -24,27 +22,35 @@ createTask = (text) => {
 };
 
 renderTasks = (task) => {
-   const isChecked = task.checked ? 'done' : '';
-   const node = document.createElement('div');
-   node.setAttribute('class', `todo-item ${isChecked}`);
-   node.setAttribute('data-key', task.id);
-   node.innerHTML =   
-   `<div class="check-and-text">
-         <div class="check">
-            <div id="${task.id}" class="check-mark">
-               <img for="${task.id}" class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">
-            </div>
-         </div>
-         <div class="todo-text">
-            ${task.text.value}
-         </div>
-      </div>
+   const todoItem = document.createElement('div');
+   todoItem.classList.add('todo-item');
+   todoItem.setAttribute('data-key', task.id);
 
-      <div class="delete-icon">
-         <img class="delete-button" src="assets/images/icon-cross.svg" alt="Delete icon">
-      </div>
-   </div>`;
-   todoContainer.append(node);
+   const checkAndText = document.createElement('div');
+   checkAndText.classList.add('check-and-text');
+   todoItem.appendChild(checkAndText);
+
+   const checkContainer = document.createElement('div');
+   checkContainer.classList.add('check');
+   checkAndText.appendChild(checkContainer);
+
+   const checkMark = document.createElement('div');
+   checkMark.classList.add('check-mark');
+   checkMark.innerHTML = '<img class="check-icon" src="assets/images/icon-check.svg" alt="Check icon">'
+   checkContainer.appendChild(checkMark);
+
+   const textContainer = document.createElement('div');
+   textContainer.classList.add('todo-text');
+   textContainer.innerText = task.text.value;
+   checkAndText.appendChild(textContainer);
+
+   const deleteBtn = document.createElement('div');
+   deleteBtn.classList.add('delete-button')
+   deleteBtn.innerHTML = '<img class="delete-button" src="assets/images/icon-cross.svg" alt="Delete icon">'
+   todoItem.appendChild(deleteBtn);
+
+
+   todoContainer.append(todoItem);
 }; 
 
 addBtn.addEventListener("click", () => {
@@ -60,38 +66,35 @@ input.addEventListener("keypress", event => {
    }
 });
 
-// * CLEAR INPUT
 clearInput = () => {
    input.value = " ";
    input.focus();
 };
 
-// * LIGHT THEME
-lightIcon.addEventListener("click", () => {
-   body.classList.remove('dark');
-   body.classList.add('light');      
-}); 
-      
-// * DARK THEME
-darkIcon.addEventListener("click", () => {
-   body.classList.remove('light');
-   body.classList.add('dark');
+todoContainer.addEventListener("click", event => {
+   const targetEl = event.target;
+   const removeTask = targetEl.closest('.todo-item');
+   const markCircle = targetEl.closest('div');
+   let text = document.querySelector('.todo-text');
+
+   // * MARK / MARK OFF TASK
+   if (targetEl.classList.contains('check-mark')) {
+         markCircle.classList.toggle('checked-task-background');
+         markCircle.classList.toggle('checked-task');
+         text.classList.toggle('checked-task-text');
+   }
+
+   // * DELETE TASK 
+   if (targetEl.classList.contains('delete-button')) {
+      removeTask.remove();
+   }
 });
+
+clearAllCompleted.addEventListener("click", () => {
    
-// * DELETE TASK
-delBtn.addEventListener("click", (e) => {
-   console.log(e);
-});
+})
 
-// * MARK TASK
-markTask = (key) => {
-   const index = todoItems.findIndex(item => item.id === Number(key));
-   todoItems[index].checked = !todoItems[index].checked;
-   renderTasks(todoItems[index]);
-};
-
-todoContainer.addEventListener('click', event => {
-   if (event.classList.contains('todo-item')) {
-      console.log(1);
-   };
-});
+// * THEMES
+theme.addEventListener("click", () => {
+   body.classList.toggle('light');
+})

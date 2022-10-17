@@ -169,13 +169,13 @@ body {
 .check-icon { display: none; }
 
 /* CHECK TASK */
-.check-task-background { 
+.checked-task-background { 
    background: var(--check-background); 
 }
 
-.completed-task .check-icon { display: unset; }
+.checked-task .check-icon { display: unset; }
 
-.completed-task .todo-text {
+.checked-task-text {
    color: gray;
    text-decoration: line-through;
    transition: all 0.15s;
@@ -220,15 +220,15 @@ body {
    align-items: center;
 }
 
-.delete-icon {
+.delete-button {
    display: flex;
    justify-content: flex-end;
    align-items: center;
-   margin-right: 2rem;
+   margin-right: 1rem;
    visibility: hidden;
 }
 
-.todo-item:hover .delete-icon { visibility: visible; }
+.todo-item:hover .delete-button { visibility: visible; }
 
 /* TASKS INFO */
 .tasks-info {

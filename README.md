@@ -27,9 +27,9 @@ Users should be able to:
 
 - [x] View the optimal layout for the app depending on their device's screen size
 - [] See hover states for all interactive elements on the page
-- [x] **Add** new todos to the list
-- [] **Mark** todos as complete
-- [] **Delete** todos from the list
+- [x] **Add** new todos to the lizst
+- [x] **Mark** todos as complete
+- [x] **Delete** todos from the list
 - [] **Filter** by all/active/complete todos
 - [] **Clear** all completed todos
 - [x] **Toggle** light and dark mode
@@ -38,7 +38,6 @@ Users should be able to:
 ### Upgrades for future versions
 
 - [] Remove the check-mark hover when clicking on the task circle
-- [] Mark off task
 - [] "Create a new todo..." after add task
 - [] Local storage
 ### Screenshot
