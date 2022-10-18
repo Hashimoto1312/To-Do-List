@@ -21,6 +21,7 @@ createTask = (text) => {
    clearInput();
 };
 
+// * CREATE TASK
 renderTasks = (task) => {
    const todoItem = document.createElement('div');
    todoItem.classList.add('todo-item');
@@ -53,6 +54,12 @@ renderTasks = (task) => {
    todoContainer.append(todoItem);
 }; 
 
+clearInput = () => {
+   input.value = " ";
+   input.focus();
+};
+
+// * EVENTS
 addBtn.addEventListener("click", () => {
    if (input.value == 0) return alert("Please, write a task");
    createTask(input);
@@ -66,25 +73,20 @@ input.addEventListener("keypress", event => {
    }
 });
 
-clearInput = () => {
-   input.value = " ";
-   input.focus();
-};
-
 todoContainer.addEventListener("click", event => {
    const targetEl = event.target;
-   const removeTask = targetEl.closest('.todo-item');
    const markCircle = targetEl.closest('div');
-   let text = document.querySelector('.todo-text');
+   const markText = targetEl.closest('.check-and-text');
 
    // * MARK / MARK OFF TASK
    if (targetEl.classList.contains('check-mark')) {
          markCircle.classList.toggle('checked-task-background');
          markCircle.classList.toggle('checked-task');
-         text.classList.toggle('checked-task-text');
+         markText.classList.toggle('checked-task-text')
    }
 
    // * DELETE TASK 
+   const removeTask = targetEl.closest('.todo-item');
    if (targetEl.classList.contains('delete-button')) {
       removeTask.remove();
    }

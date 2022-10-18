@@ -171,6 +171,7 @@ body {
 /* CHECK TASK */
 .checked-task-background { 
    background: var(--check-background); 
+   color: red;
 }
 
 .checked-task .check-icon { display: unset; }
