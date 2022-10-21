@@ -306,6 +306,10 @@ body {
       object-position: left;
    }
 
+   .delete-button {
+      visibility: visible;
+   }
+
    .mobile-items-statuses {
       display: flex;
       justify-content: center;

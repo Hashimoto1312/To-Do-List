@@ -8,8 +8,7 @@ let todoItems = [];
 
 const body = document.querySelector('body');
 const theme = document.querySelector('.theme');
-   
-// * ADD TASK
+
 createTask = (text) => {
    const task = {
       text,
@@ -21,7 +20,6 @@ createTask = (text) => {
    clearInput();
 };
 
-// * CREATE TASK
 renderTasks = (task) => {
    const todoItem = document.createElement('div');
    todoItem.classList.add('todo-item');
@@ -85,7 +83,6 @@ todoContainer.addEventListener("click", event => {
          markText.classList.toggle('checked-task-text')
    }
 
-   // * DELETE TASK 
    const removeTask = targetEl.closest('.todo-item');
    if (targetEl.classList.contains('delete-button')) {
       removeTask.remove();
@@ -96,7 +93,6 @@ clearAllCompleted.addEventListener("click", () => {
    
 })
 
-// * THEMES
 theme.addEventListener("click", () => {
    body.classList.toggle('light');
 })
