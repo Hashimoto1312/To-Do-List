@@ -38,8 +38,9 @@ Users should be able to:
 ### Upgrades for future versions
 
 - [] Remove the check-mark hover when clicking on the task circle
-- [] "Create a new todo..." after add task
 - [] Local storage
+
+
 ### Screenshot
 
 ![](./screenshot.jpg)

@@ -1,0 +1,129 @@
+{
+	"files": [
+		{
+			"path": "index.html",
+			"bookmarks": [
+				{
+					"line": 19,
+					"column": 26,
+					"label": ""
+				},
+				{
+					"line": 33,
+					"column": 21,
+					"label": ""
+				},
+				{
+					"line": 44,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 109,
+					"column": 21,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/style.css",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 28,
+					"column": 14,
+					"label": ""
+				},
+				{
+					"line": 36,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 67,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 76,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 94,
+					"column": 11,
+					"label": ""
+				},
+				{
+					"line": 132,
+					"column": 11,
+					"label": ""
+				},
+				{
+					"line": 170,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 184,
+					"column": 11,
+					"label": ""
+				},
+				{
+					"line": 233,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 275,
+					"column": 12,
+					"label": ""
+				},
+				{
+					"line": 290,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 332,
+					"column": 16,
+					"label": ""
+				},
+				{
+					"line": 421,
+					"column": 15,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "src/script.js",
+			"bookmarks": [
+				{
+					"line": 0,
+					"column": 0,
+					"label": "Consts"
+				},
+				{
+					"line": 20,
+					"column": 0,
+					"label": "Create tasks"
+				},
+				{
+					"line": 72,
+					"column": 11,
+					"label": "Events"
+				},
+				{
+					"line": 108,
+					"column": 0,
+					"label": "Themes"
+				}
+			]
+		}
+	]
+}
