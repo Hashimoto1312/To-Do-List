@@ -104,22 +104,22 @@
 			"path": "src/script.js",
 			"bookmarks": [
 				{
-					"line": 0,
+					"line": 2,
 					"column": 0,
 					"label": "Consts"
 				},
 				{
-					"line": 20,
+					"line": 21,
 					"column": 0,
 					"label": "Create tasks"
 				},
 				{
-					"line": 78,
+					"line": 83,
 					"column": 11,
 					"label": "Events"
 				},
 				{
-					"line": 114,
+					"line": 119,
 					"column": 0,
 					"label": "Themes"
 				}

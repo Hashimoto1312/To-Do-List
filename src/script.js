@@ -1,7 +1,8 @@
+import Sortable from "sortablejs";
+
 const addBtn = document.querySelector(".check-mark")
 const input = document.getElementById("new-todo-input")
 const todoContainer = document.querySelector(".todo-items")
-const delBtn = document.querySelector(".delete-button")
 const clearCompletedBtn = document.querySelector(".items-clear")
 const body = document.querySelector("body")
 const theme = document.querySelector(".theme")
@@ -75,6 +76,10 @@ clearAllCompleted = (checkedTask, tasks) => {
       }
    }
 }
+
+new Sortable(document.getElementById("example"), {
+   
+})
 
 // * EVENTS
 addBtn.addEventListener("click", () => {
