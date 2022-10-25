@@ -114,12 +114,12 @@
 					"label": "Create tasks"
 				},
 				{
-					"line": 72,
+					"line": 78,
 					"column": 11,
 					"label": "Events"
 				},
 				{
-					"line": 108,
+					"line": 114,
 					"column": 0,
 					"label": "Themes"
 				}

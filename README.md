@@ -31,7 +31,7 @@ Users should be able to:
 - [x] **Mark** todos as complete
 - [x] **Delete** todos from the list
 - [] **Filter** by all/active/complete todos
-- [] **Clear** all completed todos
+- [x] **Clear** all completed todos
 - [x] **Toggle** light and dark mode
 - [] **Bonus**: Drag and drop to reorder items on the list
 

@@ -56,13 +56,19 @@ clearInput = () => {
    input.focus()
 }
 
-clearAllCompleted = (tasks) => {
+clearAllCompleted = (checkedTask, tasks) => {
    for (const todoItem of tasks.children) {
       for (const checkAndText of todoItem.children) {
          for (const check of checkAndText.children) {
             for (const checkMark of check.children) {
-               if (checkMark.classList.contains('checked-task')) {
-                  todoItem.remove()
+               if (checkMark.classList.contains("checked-task")) {
+                  const checkedTasks = tasks.querySelectorAll(checkedTask)
+                  for (i = 0; i < checkedTasks.length; i++) {
+                     todoItem.innerHTML = " "
+                     todoItem.style.setProperty("height", "0")
+                     todoItem.style.setProperty("border", "0")
+                     todoItem.removeAttribute("data-key")
+                  }
                }
             }
          }
@@ -103,7 +109,7 @@ todoContainer.addEventListener("click", (event) => {
 })
 
 clearCompletedBtn.addEventListener("click", () => {
-   clearAllCompleted(todoContainer)
+   clearAllCompleted(".checked-task", todoContainer)
 })
 
 theme.addEventListener("click", () => {
