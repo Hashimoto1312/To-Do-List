@@ -30,7 +30,7 @@ Users should be able to:
 - [x] **Add** new todos to the lizst
 - [x] **Mark** todos as complete
 - [x] **Delete** todos from the list
-- [] **Filter** by all/active/complete todos
+- [x] **Filter** by all/active/complete todos
 - [x] **Clear** all completed todos
 - [x] **Toggle** light and dark mode
 - [] **Bonus**: Drag and drop to reorder items on the list

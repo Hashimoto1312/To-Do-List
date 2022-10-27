@@ -4,22 +4,17 @@
 			"path": "index.html",
 			"bookmarks": [
 				{
-					"line": 19,
+					"line": 23,
 					"column": 26,
 					"label": ""
 				},
 				{
-					"line": 33,
-					"column": 21,
-					"label": ""
-				},
-				{
-					"line": 44,
+					"line": 48,
 					"column": 18,
 					"label": ""
 				},
 				{
-					"line": 109,
+					"line": 114,
 					"column": 21,
 					"label": ""
 				}
@@ -69,32 +64,32 @@
 					"label": ""
 				},
 				{
-					"line": 184,
+					"line": 188,
 					"column": 11,
 					"label": ""
 				},
 				{
-					"line": 233,
+					"line": 237,
 					"column": 16,
 					"label": ""
 				},
 				{
-					"line": 275,
+					"line": 279,
 					"column": 12,
 					"label": ""
 				},
 				{
-					"line": 290,
+					"line": 294,
 					"column": 16,
 					"label": ""
 				},
 				{
-					"line": 332,
+					"line": 336,
 					"column": 16,
 					"label": ""
 				},
 				{
-					"line": 421,
+					"line": 425,
 					"column": 15,
 					"label": ""
 				}
@@ -104,24 +99,14 @@
 			"path": "src/script.js",
 			"bookmarks": [
 				{
-					"line": 2,
-					"column": 0,
-					"label": "Consts"
-				},
-				{
-					"line": 21,
+					"line": 27,
 					"column": 0,
 					"label": "Create tasks"
 				},
 				{
-					"line": 83,
+					"line": 94,
 					"column": 11,
 					"label": "Events"
-				},
-				{
-					"line": 119,
-					"column": 0,
-					"label": "Themes"
 				}
 			]
 		}

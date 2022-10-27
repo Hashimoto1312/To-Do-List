@@ -182,6 +182,10 @@ body {
    transition: all 0.15s;
 }
 
+.no-display {
+   display: none;
+}
+
 /* TASKS */
 .todo-items-wrapper {
    margin-top: 30px;

@@ -1,19 +1,25 @@
-import Sortable from "sortablejs";
+// import Sortable from "sortablejs"
 
 const addBtn = document.querySelector(".check-mark")
 const input = document.getElementById("new-todo-input")
 const todoContainer = document.querySelector(".todo-items")
+const allTasksBtn = document.querySelector(".all-items")
+const activeTasksBtn = document.querySelector(".active-items")
+const completedTasksBtn = document.querySelector(".completed-items")
 const clearCompletedBtn = document.querySelector(".items-clear")
 const body = document.querySelector("body")
 const theme = document.querySelector(".theme")
 let todoItems = []
+
+// Sortable.create(todoContainer, {
+//    animation: 350,
+// })
 
 createTask = (text) => {
    const task = {
       text,
       id: Date.now(),
    }
-
    todoItems.push(task)
    renderTasks(task)
    clearInput()
@@ -22,6 +28,7 @@ createTask = (text) => {
 renderTasks = (task) => {
    const todoItem = document.createElement("div")
    todoItem.classList.add("todo-item")
+   todoItem.classList.add("active-task")
    todoItem.setAttribute("data-key", task.id)
 
    const checkAndText = document.createElement("div")
@@ -50,6 +57,7 @@ renderTasks = (task) => {
    todoItem.appendChild(deleteBtn)
 
    todoContainer.append(todoItem)
+   setLeftItems()
 }
 
 clearInput = () => {
@@ -65,9 +73,8 @@ clearAllCompleted = (checkedTask, tasks) => {
                if (checkMark.classList.contains("checked-task")) {
                   const checkedTasks = tasks.querySelectorAll(checkedTask)
                   for (i = 0; i < checkedTasks.length; i++) {
+                     todoItem.style.display = "none"
                      todoItem.innerHTML = " "
-                     todoItem.style.setProperty("height", "0")
-                     todoItem.style.setProperty("border", "0")
                      todoItem.removeAttribute("data-key")
                   }
                }
@@ -77,9 +84,13 @@ clearAllCompleted = (checkedTask, tasks) => {
    }
 }
 
-new Sortable(document.getElementById("example"), {
-   
-})
+let leftItems = document.querySelector(".left-items")
+setLeftItems = () => {
+   let activeTodo = document.querySelectorAll(".todo-item .active-task")
+   console.log(activeTodo.length)
+   // let diff = todoContainer.length - activeTodo.length
+   // leftItems.innerText = `${diff} items left`
+}
 
 // * EVENTS
 addBtn.addEventListener("click", () => {
@@ -110,6 +121,49 @@ todoContainer.addEventListener("click", (event) => {
    const removeTask = targetEl.closest(".todo-item")
    if (targetEl.classList.contains("delete-button")) {
       removeTask.remove()
+   }
+})
+
+allTasksBtn.addEventListener("click", () => {
+   for (const todoItem of todoContainer.children) {
+      for (const checkAndText of todoItem.children) {
+         for (const check of checkAndText.children) {
+            for (const checkMark of check.children) {
+               todoItem.style.removeProperty("display")
+            }
+         }
+      }
+   }
+})
+
+activeTasksBtn.addEventListener("click", () => {
+   for (const todoItem of todoContainer.children) {
+      for (const checkAndText of todoItem.children) {
+         for (const check of checkAndText.children) {
+            for (const checkMark of check.children) {
+               todoItem.style.removeProperty("display")
+               if (checkMark.classList.contains("checked-task")) {
+                  todoItem.classList.add("completed-task")
+                  todoItem.style.display = "none"
+               }
+            }
+         }
+      }
+   }
+})
+
+completedTasksBtn.addEventListener("click", () => {
+   for (const todoItem of todoContainer.children) {
+      for (const checkAndText of todoItem.children) {
+         for (const check of checkAndText.children) {
+            for (const checkMark of check.children) {
+               todoItem.style.removeProperty("display")
+               if (!checkMark.classList.contains("checked-task")) {
+                  todoItem.style.display = "none"
+               }
+            }
+         }
+      }
    }
 })
 
