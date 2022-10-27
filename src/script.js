@@ -7,9 +7,9 @@ const allTasksBtn = document.querySelector(".all-items")
 const activeTasksBtn = document.querySelector(".active-items")
 const completedTasksBtn = document.querySelector(".completed-items")
 const clearCompletedBtn = document.querySelector(".items-clear")
+const itemsLeft = document.querySelector(".left-items span")
 const body = document.querySelector("body")
 const theme = document.querySelector(".theme")
-let todoItems = []
 
 // Sortable.create(todoContainer, {
 //    animation: 350,
@@ -20,7 +20,7 @@ createTask = (text) => {
       text,
       id: Date.now(),
    }
-   todoItems.push(task)
+
    renderTasks(task)
    clearInput()
 }
@@ -57,7 +57,7 @@ renderTasks = (task) => {
    todoItem.appendChild(deleteBtn)
 
    todoContainer.append(todoItem)
-   setLeftItems()
+   updateItemsCount(1)
 }
 
 clearInput = () => {
@@ -84,12 +84,8 @@ clearAllCompleted = (checkedTask, tasks) => {
    }
 }
 
-let leftItems = document.querySelector(".left-items")
-setLeftItems = () => {
-   let activeTodo = document.querySelectorAll(".todo-item .active-task")
-   console.log(activeTodo.length)
-   // let diff = todoContainer.length - activeTodo.length
-   // leftItems.innerText = `${diff} items left`
+updateItemsCount = (number) => {
+   itemsLeft.innerText = +itemsLeft.innerText + number
 }
 
 // * EVENTS
@@ -121,6 +117,7 @@ todoContainer.addEventListener("click", (event) => {
    const removeTask = targetEl.closest(".todo-item")
    if (targetEl.classList.contains("delete-button")) {
       removeTask.remove()
+      updateItemsCount(-1)
    }
 })
 
