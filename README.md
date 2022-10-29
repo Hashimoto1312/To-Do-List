@@ -38,9 +38,9 @@ Users should be able to:
 - [] Local storage
 - [] SortableJS local storage
 
-### Running
+### Project Running
 
-![](./assets/images/Todolist.gif)
+![](https://github.com/Hashimoto1312/To-Do-List/blob/main/Todolist.gif)
 
 ### Links
 
