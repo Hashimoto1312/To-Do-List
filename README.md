@@ -1,6 +1,6 @@
 # Frontend Mentor - Todo app
 
-![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Todo app coding challenge](./assets/design/desktop-preview.jpg)
 
 ## Table of contents
 
@@ -9,7 +9,7 @@
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Upgrades for future versions](#upgrades-for-future-versions)
-    - [Screenshot](#screenshot)
+    - [Running](#running)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -17,7 +17,6 @@
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -39,14 +38,14 @@ Users should be able to:
 - [] Local storage
 - [] SortableJS local storage
 
-### Screenshot
+### Running
 
-![](./screenshot.jpg)
+![](./assets/images/Todolist.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL : [Solution](https://www.frontendmentor.io/solutions/to-do-list-vanilla-javascript-responsive-dark-and-light-mode-cDbcEpj9Qj)
+- Live Site URL : [Site](https://todolist-sigma-blue.vercel.app/)
 
 ## My process
 ### Built with
@@ -54,42 +53,54 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Dragabble library (https://shopify.github.io/draggable/)
+- Vanilla JavaScript
+- [Sortable JS](https://github.com/SortableJS/Sortable)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Neste projeto o que mais aprendi foi como manipular melhor o [DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), este projeto me forçou bastante a pesquisar documentação e testar várias vezes.
 
-To see how you can add code snippets, see below:
+Criar elementos, adicionar classes a esses elementos, manipular essas classes de modo interativo e dinâmico por meio de eventos de click foram coisas que repeti bastante e concerteza fixou bastante por meio deste projeto.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Também aprendi a usar melhor os MediasQueries do CSS
+
+Alguns exemplos abaixo :
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+renderTasks = (task) => {
+   const todoItem = document.createElement("div")
+   todoItem.classList.add("todo-item")
+   todoItem.classList.add("active-task")
+   todoItem.setAttribute("data-key", task.id)
 }
+
+```
+---
+
+```js
+theme.addEventListener("click", () => {
+   body.classList.toggle("light")
+})
+```
+----
+
+```js
+addBtn.addEventListener("click", () => {
+   if (input.value == 0) return alert("Please, write a task")
+   createTask(input)
+})
 ```
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Nesse projeto usei apenas Javascript Vanilla, mas futuramente pretendo fazer uma outra lista de tarefas mais interativa e com React, também aceito com prazer pull requests e issues de melhorias que posso fazer na legibilidade do código.
+
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [addEventListener is not a function in JavaScript](https://bobbyhadz.com/blog/javascript-addeventlistener-is-not-a-function) - Tive um problema ao selecionar classes iguais porem em divs diferentes com querySelectorAll e este artigo me ajudou bastante.
+   
+- [HTML Elements](https://www.w3schools.com/jsref/prop_element_classlist.asp) - Essa pagina da w3schools me ajudou bastante para testar métodos no meu código por meio de tentativa e erro, recomendo.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Linktree - [Kendi Hashimoto](https://linktr.ee/Hashimoto01)
+- Frontend Mentor - [@Kendi Hashimoto](https://www.frontendmentor.io/profile/Hashimoto1312)
