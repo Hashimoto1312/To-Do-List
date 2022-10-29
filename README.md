@@ -36,10 +36,8 @@ Users should be able to:
 - [] **Bonus**: Drag and drop to reorder items on the list
 
 ### Upgrades for future versions
-
-- [] Remove the check-mark hover when clicking on the task circle
 - [] Local storage
-
+- [] SortableJS local storage
 
 ### Screenshot
 

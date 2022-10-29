@@ -1,19 +1,16 @@
-// import Sortable from "sortablejs"
-
 const addBtn = document.querySelector(".check-mark")
 const input = document.getElementById("new-todo-input")
+
 const todoContainer = document.querySelector(".todo-items")
+
+const itemsLeft = document.querySelector(".left-items span")
 const allTasksBtn = document.querySelector(".all-items")
 const activeTasksBtn = document.querySelector(".active-items")
 const completedTasksBtn = document.querySelector(".completed-items")
 const clearCompletedBtn = document.querySelector(".items-clear")
-const itemsLeft = document.querySelector(".left-items span")
+
 const body = document.querySelector("body")
 const theme = document.querySelector(".theme")
-
-// Sortable.create(todoContainer, {
-//    animation: 350,
-// })
 
 createTask = (text) => {
    const task = {
@@ -77,6 +74,7 @@ clearAllCompleted = (checkedTask, tasks) => {
                      todoItem.innerHTML = " "
                      todoItem.removeAttribute("data-key")
                   }
+                  updateItemsCount(-1)
                }
             }
          }
@@ -170,4 +168,11 @@ clearCompletedBtn.addEventListener("click", () => {
 
 theme.addEventListener("click", () => {
    body.classList.toggle("light")
+})
+
+new Sortable(todoContainer, {
+   animation: 350,
+   chosenClass: "chosen-class",
+   forceFallback: true,
+   dragoverBubble: true,
 })

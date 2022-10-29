@@ -4,12 +4,12 @@
 			"path": "index.html",
 			"bookmarks": [
 				{
-					"line": 23,
+					"line": 24,
 					"column": 26,
 					"label": ""
 				},
 				{
-					"line": 48,
+					"line": 49,
 					"column": 18,
 					"label": ""
 				},
@@ -29,68 +29,58 @@
 					"label": ""
 				},
 				{
-					"line": 28,
+					"line": 36,
 					"column": 14,
 					"label": ""
 				},
 				{
-					"line": 36,
+					"line": 44,
 					"column": 10,
 					"label": ""
 				},
 				{
-					"line": 67,
+					"line": 79,
 					"column": 10,
 					"label": ""
 				},
 				{
-					"line": 76,
+					"line": 88,
 					"column": 12,
 					"label": ""
 				},
 				{
-					"line": 94,
+					"line": 114,
 					"column": 11,
 					"label": ""
 				},
 				{
-					"line": 132,
+					"line": 160,
 					"column": 11,
 					"label": ""
 				},
 				{
-					"line": 170,
+					"line": 199,
 					"column": 0,
 					"label": ""
 				},
 				{
-					"line": 188,
+					"line": 250,
 					"column": 11,
 					"label": ""
 				},
 				{
-					"line": 237,
+					"line": 311,
 					"column": 16,
 					"label": ""
 				},
 				{
-					"line": 279,
+					"line": 373,
 					"column": 12,
 					"label": ""
 				},
 				{
-					"line": 294,
+					"line": 394,
 					"column": 16,
-					"label": ""
-				},
-				{
-					"line": 336,
-					"column": 16,
-					"label": ""
-				},
-				{
-					"line": 425,
-					"column": 15,
 					"label": ""
 				}
 			]
@@ -99,12 +89,12 @@
 			"path": "src/script.js",
 			"bookmarks": [
 				{
-					"line": 27,
+					"line": 24,
 					"column": 0,
 					"label": "Create tasks"
 				},
 				{
-					"line": 91,
+					"line": 89,
 					"column": 11,
 					"label": "Events"
 				}
