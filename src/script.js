@@ -4,10 +4,11 @@ const input = document.getElementById("new-todo-input")
 const todoContainer = document.querySelector(".todo-items")
 
 const itemsLeft = document.querySelector(".left-items span")
-const allTasksBtn = document.querySelector(".all-items")
-const activeTasksBtn = document.querySelector(".active-items")
-const completedTasksBtn = document.querySelector(".completed-items")
 const clearCompletedBtn = document.querySelector(".items-clear")
+
+const allTasksBtn = document.getElementsByClassName("all-items")
+const activeTasksBtn = document.getElementsByClassName("active-items")
+const completedTasksBtn = document.getElementsByClassName("completed-items")
 
 const body = document.querySelector("body")
 const theme = document.querySelector(".theme")
@@ -119,48 +120,57 @@ todoContainer.addEventListener("click", (event) => {
    }
 })
 
-allTasksBtn.addEventListener("click", () => {
-   for (const todoItem of todoContainer.children) {
-      for (const checkAndText of todoItem.children) {
-         for (const check of checkAndText.children) {
-            for (const checkMark of check.children) {
-               todoItem.style.removeProperty("display")
-            }
-         }
-      }
-   }
-})
-
-activeTasksBtn.addEventListener("click", () => {
-   for (const todoItem of todoContainer.children) {
-      for (const checkAndText of todoItem.children) {
-         for (const check of checkAndText.children) {
-            for (const checkMark of check.children) {
-               todoItem.style.removeProperty("display")
-               if (checkMark.classList.contains("checked-task")) {
-                  todoItem.classList.add("completed-task")
-                  todoItem.style.display = "none"
+allTasksBtn[0].addEventListener("click", function onClick() {})
+for (const allBtn of allTasksBtn) {
+   allBtn.addEventListener("click", function onClick() {
+      for (const todoItem of todoContainer.children) {
+         for (const checkAndText of todoItem.children) {
+            for (const check of checkAndText.children) {
+               for (const checkMark of check.children) {
+                  todoItem.style.removeProperty("display")
                }
             }
          }
       }
-   }
-})
+   })
+}
 
-completedTasksBtn.addEventListener("click", () => {
-   for (const todoItem of todoContainer.children) {
-      for (const checkAndText of todoItem.children) {
-         for (const check of checkAndText.children) {
-            for (const checkMark of check.children) {
-               todoItem.style.removeProperty("display")
-               if (!checkMark.classList.contains("checked-task")) {
-                  todoItem.style.display = "none"
+activeTasksBtn[0].addEventListener("click", function onClick() {})
+for (const activeBtn of activeTasksBtn) {
+   activeBtn.addEventListener("click", function onClick() {
+      for (const todoItem of todoContainer.children) {
+         for (const checkAndText of todoItem.children) {
+            for (const check of checkAndText.children) {
+               for (const checkMark of check.children) {
+                  todoItem.style.removeProperty("display")
+                  if (checkMark.classList.contains("checked-task")) {
+                     todoItem.classList.add("completed-task")
+                     todoItem.style.display = "none"
+                  }
                }
             }
          }
       }
-   }
-})
+   })
+}
+
+completedTasksBtn[0].addEventListener("click", function onClick() {})
+for (const completedBtn of completedTasksBtn) {
+   completedBtn.addEventListener("click", function onClick() {
+      for (const todoItem of todoContainer.children) {
+         for (const checkAndText of todoItem.children) {
+            for (const check of checkAndText.children) {
+               for (const checkMark of check.children) {
+                  todoItem.style.removeProperty("display")
+                  if (!checkMark.classList.contains("checked-task")) {
+                     todoItem.style.display = "none"
+                  }
+               }
+            }
+         }
+      }
+   })
+}
 
 clearCompletedBtn.addEventListener("click", () => {
    clearAllCompleted(".checked-task", todoContainer)

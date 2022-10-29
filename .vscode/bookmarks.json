@@ -89,12 +89,12 @@
 			"path": "src/script.js",
 			"bookmarks": [
 				{
-					"line": 24,
+					"line": 25,
 					"column": 0,
 					"label": "Create tasks"
 				},
 				{
-					"line": 89,
+					"line": 90,
 					"column": 11,
 					"label": "Events"
 				}
